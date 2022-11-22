@@ -1,15 +1,6 @@
 process.stdout.write('hello from spinner1.js... \rheyyy\n');
-const spinner = function(str) {
-  let delay = 0;
-  for (const char of str) {
-    let char = char + '\r'
-    setTimeout(() => process.stdout.write(char), delay += 200);
-  }
-};
 
-spinner('|/-|\\-|')
 
-/*
 setTimeout(() => {
   process.stdout.write('\r|  ');
 }, 100);
@@ -45,7 +36,7 @@ setTimeout(() => {
 setTimeout(() => {
   process.stdout.write('\r|  ');
 }, 1700);
-*/
+
 //HOW THIS WORKS
 //Each character is a delayed write, using setTimeout
 // With each delayed write, we start with returning the cursor to the beginning
